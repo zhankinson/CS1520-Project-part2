@@ -1,5 +1,12 @@
 <!-- Zachary Hankinson
 CS1520 -->
+<?php
+  echo '<link rel="stylesheet" href="css/mycss.css">';
+  echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">';
+  echo '<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,8 +21,8 @@ CS1520 -->
   </head>
   <body>
     <div class="jumbotron">
-      <div class="container">
-        <h1><center>Welcome To My First Real Webpage!</center></h1>
+      <div id="jumbo" class="container">
+        <h1 class="burning"><center>Zach Hankinson's Webpage</center></h1>
       </div>
     </div>
     <ul class="nav nav-tabs nav-justified">
@@ -26,7 +33,7 @@ CS1520 -->
     <div id="all" class="container tab-content">
       <div class="tab-pane fade in active" id="Self">
         <br>
-        <img id="propic" class="img-rounded center-block" src="http://136.142.82.187/engr0011/images/students/zah15.JPG" alt="img/zah15.JPG" class="img-rounded"/>
+        <img id="propic" class="img-rounded center-block" src="img/zah15.JPG" alt="http://136.142.82.187/engr0011/images/students/zah15.JPG" class="img-rounded"/>
         <h2 class="text-center">Bio</h2>
         <p>
           My life began in Millstone, New Jersey where I spent a lot of time
@@ -41,24 +48,28 @@ CS1520 -->
           took my first programming class. My school career has certainly been a challenge
           I know it will all pay off in the end.
         </p>
+        <h2 class="text-center">Goals</h2>
         <p>
           My goals are to pursue a future where I can hone the skills I have acquired
           over the course of my college career. The fields that best suite me would
           relate to:
+        </p>
           <ul>
             <li>Java Programming</li>
             <li>Web Programming</li>
             <li>Database Management</li>
             <li>Game Design</li>
           </ul>
+        <p>
           I am excited to gain even more knowledge as my hunt for a career transitions
           from school to the real world.
         </p>
         <h2 class="text-center">Interests</h2>
         <p>
-          My interests outside of programming includes playing video games, browsing
-          the internet for funny videos, watching movies, and making music. I also like
-          to exercise in my spare time.
+          My interests outside of programming includes making music, playing video games, browsing
+          the internet for funny videos, and watching movies/cartoons. I often feel like a child at
+          heart but I consider that a good thing. I also like to cook and exercise whenever I get a
+          chance.
         </p>
         <br>
         <h2 class="text-center">Favorites</h2>
@@ -128,21 +139,21 @@ CS1520 -->
         <br>
         <img id="pointer" class="img-responsive center-block" src="http://theshineonhealth.com/web_images/finger_pointing.gif" alt="img/pointer.gif"/>
         <h2 class="text-center">Tell Me About Yourself</h2>
-        <form action="mailto:zah15@pitt.edu" method="post" enctype="text/plain">
+        <form id="myForm" name ="myForm" method="POST" action="submit.php" target="dummy">
           <div class="form-group">
             <label for="yourname">What's your name?</label>
-            <input type="text" class="form-control" id="yourname" name="name" placeholder="Smitty Werbenjagermanjensen">
+            <input type="text" class="form-control" minlength="2" id="yourname" name="name" placeholder="Smitty Werbenjagermanjensen">
           </div>
           <div class="form-group">
             <label for="gender">What's your gender?</label><br>
               <label class="radio-inline" for="male">
-                <input name="gender" type="radio" id="male" value="male"> Male
+                <input name="gender" class="form" type="radio" id="male" value="male"> Male
               </label>
               <label class="radio-inline" for="female">
-                <input name="gender" type="radio" id="female" value="female"> Female
+                <input name="gender" class="form" type="radio" id="female" value="female"> Female
               </label>
               <label class="radio-inline" for="other">
-                <input name="gender" type="radio" id="other" value="other"> Other
+                <input name="gender" class="form" type="radio" id="other" value="other"> Other
               </label>
           </div>
           <div class="form-group">
@@ -206,7 +217,7 @@ CS1520 -->
             <label for="reason">Why are you here?</label>
             <textarea name="reason" class="form-control" rows="5"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" value="Send">Submit</button>
+          <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
           <button type="reset" class="btn btn-default" value="Reset">Reset</button>
         </form>
       </div>
@@ -225,9 +236,12 @@ CS1520 -->
       <br>
       <br>
     </div>
+    <iframe width="0" height="0" border="0" name="dummy" id="dummy"></iframe>
     <script src="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/myjs.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMUbc1QWvKa8R36VZ51KwTnxQGIaIKNrA&callback=myMap"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/jquery.burn.js"></script>
   </body>
 </html>

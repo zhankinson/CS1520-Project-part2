@@ -2,7 +2,11 @@
 CS1520*/
 /*Styles by attribute*/
 p {
-  font-size: 12pt;
+  font-size: 14pt;
+}
+
+body {
+  background-color: rgba(203,221,230,1) !important;
 }
 
 /*Styles by ID*/
@@ -20,6 +24,10 @@ p {
   visibility: hidden;
 }
 
+/*#you #me #con {
+  background-color: #d3d3d3 !important;
+}*/
+
 /*Styles by class*/
 .carousel-inner > .item > img {
   height: 200px !important;
@@ -27,5 +35,11 @@ p {
 }
 .jumbotron {
   color: white !important;
-  background-color: #003163 !important;
+  background: url('../img/darkblue.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+}
+
+.burning{
+  color: white;
 }
